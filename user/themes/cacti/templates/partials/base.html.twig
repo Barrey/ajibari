@@ -13,6 +13,7 @@
   <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
   {% block stylesheets %}
     {% do assets.addCss('theme://css/style.css',100) %}
+    {% include 'partials/css.html.twig' %}
   {% endblock %}
   {{ assets.css() }}
 
@@ -22,6 +23,9 @@
       {% do assets.addJs('theme://js/jquery.jscroll.min.js') %}
   {% endblock %}
   {{ assets.js() }}
+
+  {% include 'partials/script.html.twig' %}
+
 </head>
 <body>
 
