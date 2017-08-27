@@ -1,10 +1,11 @@
 ---
-title: Welcome to Grav!
-date: 16:00 10-07-2015
-headline: Get ready to fall in love :)
+title: 'Welcome to Grav!'
+published: false
+date: '16:00 10-07-2015'
 taxonomy:
-    category: blog
-    tag: [grav]
+    tag:
+        - grav
+headline: 'Get ready to fall in love :)'
 ---
 
 You'll find this post in your `user/pages/01.blog/welcome-to-grav` folder - edit this post and reload the browser to see your changes.

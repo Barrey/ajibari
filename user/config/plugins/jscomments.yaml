@@ -1,0 +1,33 @@
+enabled: true
+active: true
+provider: disqus
+providers:
+  disqus:
+    shortname: ajibari-com
+    show_count: true
+  facebook:
+    num_posts: 5
+    colorscheme: light
+    order_by: social
+    width: 100%
+  googleplus:
+    show_count: false
+    width: 100%
+  muut:
+    channel: General
+    widget: false
+    show_online: false
+    show_title: false
+    upload: false
+    share: true
+  hypercomments:
+    social:
+      - vk
+      - odnoklassniki
+      - yandex
+      - mailru
+      - google
+      - livejournal
+      - facebook
+      - twitter
+      - tumblr

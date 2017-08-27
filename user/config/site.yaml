@@ -1,2 +1,16 @@
-title: Grav MultiLang
-taxonomies: [tag]
+title: Ajibari.com
+default_lang: en
+author:
+  name: 'Ridwan Aji Bari'
+  email: ajibari@gmail.com
+taxonomies:
+  - tag
+metadata:
+  description: 'My Personal Blog'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

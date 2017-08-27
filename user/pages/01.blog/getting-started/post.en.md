@@ -1,10 +1,11 @@
 ---
-title: Getting Started with Grav
-date: 09:55 07-07-2015
-headline: Grav is super easy to install, just follow along...
+title: 'Getting Started with Grav'
+published: false
+date: '09:55 07-07-2015'
 taxonomy:
-    category: blog
-    tag: [grav]
+    tag:
+        - grav
+headline: 'Grav is super easy to install, just follow along...'
 ---
 
 Grav is very easy to install. Because it does not require a database, installation can be as simple as unzipping the Grav core (or a skeleton) in the server directory you wish to have your Grav install appear.
