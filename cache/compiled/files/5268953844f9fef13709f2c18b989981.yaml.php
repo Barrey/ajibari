@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/user/plugins/admin/themes/grav/templates/forms/fields/iconpicker/icons.yaml',
-    'modified' => 1503154899,
+    'modified' => 1503160188,
     'data' => [
         'icons' => [
             0 => [

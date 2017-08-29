@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/user/plugins/email/languages.yaml',
-    'modified' => 1503159761,
+    'modified' => 1503160326,
     'data' => [
         'en' => [
             'PLUGIN_EMAIL' => [

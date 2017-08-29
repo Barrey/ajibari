@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/user/plugins/admin/languages/vi.yaml',
-    'modified' => 1503159776,
+    'modified' => 1503160068,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => 'Đây là phiên bản thử nghiệm! Bạn phải tự chịu rủi ro khi sử dụng trong production...',

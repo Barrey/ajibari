@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/user/plugins/login/blueprints.yaml',
-    'modified' => 1503159767,
+    'modified' => 1503160534,
     'data' => [
         'name' => 'Login',
         'version' => '2.3.2',

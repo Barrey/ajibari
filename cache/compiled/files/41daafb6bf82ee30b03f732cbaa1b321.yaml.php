@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/user/plugins/login/languages.yaml',
-    'modified' => 1503159767,
+    'modified' => 1503160540,
     'data' => [
         'en' => [
             'PLUGIN_LOGIN' => [

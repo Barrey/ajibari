@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/user/plugins/langswitcher/blueprints.yaml',
-    'modified' => 1502842162,
+    'modified' => 1503159150,
     'data' => [
         'name' => 'LangSwitcher',
         'version' => '1.4.0',

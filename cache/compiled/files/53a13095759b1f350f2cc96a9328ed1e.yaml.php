@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/system/languages/hu.yaml',
-    'modified' => 1502842160,
+    'modified' => 1503159048,
     'data' => [
         'FRONTMATTER_ERROR_PAGE' => '---
 cím: %1$s

@@ -1,55 +1,63 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1503714740,
-    'checksum' => '811adee1fca1c92d638fee12a38c7220',
+    'timestamp' => 1503892919,
+    'checksum' => '8a643b1002a23bf6800b355e2b169e47',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
                 'file' => 'system/blueprints/config/media.yaml',
-                'modified' => 1502842160
+                'modified' => 1503158990
             ],
             'site' => [
                 'file' => 'system/blueprints/config/site.yaml',
-                'modified' => 1502842160
+                'modified' => 1503158990
             ],
             'streams' => [
                 'file' => 'system/blueprints/config/streams.yaml',
-                'modified' => 1502842160
+                'modified' => 1503158990
             ],
             'system' => [
                 'file' => 'system/blueprints/config/system.yaml',
-                'modified' => 1502842160
+                'modified' => 1503158992
             ]
         ],
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/blueprints.yaml',
-                'modified' => 1503159776
+                'modified' => 1503160046
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/blueprints.yaml',
-                'modified' => 1503159761
+                'modified' => 1503160322
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
-                'modified' => 1502842162
+                'modified' => 1503159142
+            ],
+            'plugins/featherlight' => [
+                'file' => 'user/plugins/featherlight/blueprints.yaml',
+                'modified' => 1503892919
             ],
             'plugins/feed' => [
                 'file' => 'user/plugins/feed/blueprints.yaml',
-                'modified' => 1502842162
+                'modified' => 1503159146
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/blueprints.yaml',
-                'modified' => 1503159755
+                'modified' => 1503160506
+            ],
+            'plugins/jscomments' => [
+                'file' => 'user/plugins/jscomments/blueprints.yaml',
+                'modified' => 1503387636
             ],
             'plugins/langswitcher' => [
                 'file' => 'user/plugins/langswitcher/blueprints.yaml',
-                'modified' => 1502842162
+                'modified' => 1503159150
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/blueprints.yaml',
-                'modified' => 1503159767
+                'modified' => 1503160534
             ],
             'plugins/markdown-fontawesome' => [
                 'file' => 'user/plugins/markdown-fontawesome/blueprints.yaml',
@@ -57,11 +65,11 @@ return [
             ],
             'plugins/pagination' => [
                 'file' => 'user/plugins/pagination/blueprints.yaml',
-                'modified' => 1502842162
+                'modified' => 1503159154
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
-                'modified' => 1502842164
+                'modified' => 1503159158
             ]
         ]
     ],
@@ -2521,6 +2529,133 @@ return [
                 'name' => 'plugins.error.routes.404',
                 'validation' => 'strict'
             ],
+            'plugins.featherlight' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.featherlight.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'hightlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.featherlight.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.featherlight.active' => [
+                'type' => 'toggle',
+                'label' => 'Active',
+                'hightlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.featherlight.active',
+                'validation' => 'strict'
+            ],
+            'plugins.featherlight.requirejs' => [
+                'type' => 'toggle',
+                'label' => 'RequireJS',
+                'hightlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.featherlight.requirejs',
+                'validation' => 'strict'
+            ],
+            'plugins.featherlight.gallery' => [
+                'type' => 'toggle',
+                'label' => 'Gallery',
+                'hightlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.featherlight.gallery',
+                'validation' => 'strict'
+            ],
+            'plugins.featherlight.openSpeed' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Open Speed',
+                'default' => '250',
+                'name' => 'plugins.featherlight.openSpeed',
+                'validation' => 'strict'
+            ],
+            'plugins.featherlight.closeSpeed' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Close Speed',
+                'default' => '250',
+                'name' => 'plugins.featherlight.closeSpeed',
+                'validation' => 'strict'
+            ],
+            'plugins.featherlight.closeOnClick' => [
+                'type' => 'select',
+                'size' => 'medium',
+                'classes' => 'fancy',
+                'label' => 'Close on Click',
+                'options' => [
+                    'background' => 'background',
+                    'anywhere' => 'anywhere',
+                    'false' => 'false'
+                ],
+                'name' => 'plugins.featherlight.closeOnClick',
+                'validation' => 'strict'
+            ],
+            'plugins.featherlight.closeOnEsc' => [
+                'type' => 'toggle',
+                'label' => 'Close on Esc',
+                'hightlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.featherlight.closeOnEsc',
+                'validation' => 'strict'
+            ],
+            'plugins.featherlight.root' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Root',
+                'default' => 'body',
+                'name' => 'plugins.featherlight.root',
+                'validation' => 'strict'
+            ],
+            'plugins.featherlight.initTemplate' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Init script',
+                'default' => 'plugin://featherlight/js/featherlight.init.js',
+                'name' => 'plugins.featherlight.initTemplate',
+                'validation' => 'strict'
+            ],
             'plugins.feed' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -2696,6 +2831,429 @@ return [
                 'label' => 'PLUGIN_FORM.RECAPTCHA_SECRET_KEY',
                 'default' => '',
                 'name' => 'plugins.form.recaptcha.secret_key',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.jscomments.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.JS_COMMENTS.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.jscomments.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.active' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.JS_COMMENTS.PLUGIN_ACTIVE',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.jscomments.active',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.provider' => [
+                'type' => 'select',
+                'size' => 'medium',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.TITLE',
+                'data-options@' => '\\Grav\\Plugin\\JSCommentsPlugin::getProviders',
+                'options' => [
+                    '' => 'PLUGINS.JS_COMMENTS.NONE_SELECTED'
+                ],
+                'default' => '',
+                'validate' => [
+                    'required' => true,
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.provider',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.jscomments' => [
+                'type' => 'tab',
+                'name' => 'plugins.jscomments.jscomments',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers' => [
+                'type' => '_parent',
+                'name' => 'plugins.jscomments.providers',
+                'form_field' => false
+            ],
+            'plugins.jscomments.providers.discourse' => [
+                'type' => '_parent',
+                'name' => 'plugins.jscomments.providers.discourse',
+                'form_field' => false
+            ],
+            'plugins.jscomments.providers.discourse.host' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.DISCOURSE.FIELDS.HOST',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.discourse.host',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.discourse' => [
+                'type' => 'section',
+                'name' => 'plugins.jscomments.discourse',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.disqus' => [
+                'type' => '_parent',
+                'name' => 'plugins.jscomments.providers.disqus',
+                'form_field' => false
+            ],
+            'plugins.jscomments.providers.disqus.shortname' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.SHORTNAME',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.disqus.shortname',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.disqus.show_count' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.COUNT',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.jscomments.providers.disqus.show_count',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.disqus.language' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.DISQUS.FIELDS.DEFAULT_LANGUAGE',
+                'size' => 'x-small',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.disqus.language',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.disqus' => [
+                'type' => 'section',
+                'name' => 'plugins.jscomments.disqus',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.facebook' => [
+                'type' => '_parent',
+                'name' => 'plugins.jscomments.providers.facebook',
+                'form_field' => false
+            ],
+            'plugins.jscomments.providers.facebook.app_id' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.APPID',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.facebook.app_id',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.facebook.num_posts' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.NUM_POSTS',
+                'append' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.NUM_POSTS_APPEND',
+                'validate' => [
+                    'type' => 'int',
+                    'min' => 1
+                ],
+                'name' => 'plugins.jscomments.providers.facebook.num_posts',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.facebook.colorscheme' => [
+                'type' => 'select',
+                'size' => 'medium',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.TITLE',
+                'default' => 'light',
+                'options' => [
+                    'light' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.OPTIONS.LIGHT',
+                    'dark' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.COLORSCHEME.OPTIONS.DARK'
+                ],
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.facebook.colorscheme',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.facebook.order_by' => [
+                'type' => 'select',
+                'size' => 'medium',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.TITLE',
+                'default' => 'social',
+                'options' => [
+                    'social' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.SOCIAL',
+                    'reverse_time' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.REVERSE_TIME',
+                    'time' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.ORDER_BY.OPTIONS.TIME'
+                ],
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.facebook.order_by',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.facebook.language' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.LANGUAGE',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.facebook.language',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.facebook.width' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.FACEBOOK.FIELDS.WIDTH',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.facebook.width',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.facebook' => [
+                'type' => 'section',
+                'name' => 'plugins.jscomments.facebook',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.googleplus' => [
+                'type' => '_parent',
+                'name' => 'plugins.jscomments.providers.googleplus',
+                'form_field' => false
+            ],
+            'plugins.jscomments.providers.googleplus.show_count' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.COUNT',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.jscomments.providers.googleplus.show_count',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.googleplus.language' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.DEFAULT_LANGUAGE',
+                'size' => 'x-small',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.googleplus.language',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.googleplus.width' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.GOOGLEPLUS.FIELDS.WIDTH',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.googleplus.width',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.googleplus' => [
+                'type' => 'section',
+                'name' => 'plugins.jscomments.googleplus',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.intensedebate' => [
+                'type' => '_parent',
+                'name' => 'plugins.jscomments.providers.intensedebate',
+                'form_field' => false
+            ],
+            'plugins.jscomments.providers.intensedebate.account_number' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.INTENSEDEBATE.FIELDS.ACCOUNT_NUMBER',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.intensedebate.account_number',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.intensedebate' => [
+                'type' => 'section',
+                'name' => 'plugins.jscomments.intensedebate',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.muut' => [
+                'type' => '_parent',
+                'name' => 'plugins.jscomments.providers.muut',
+                'form_field' => false
+            ],
+            'plugins.jscomments.providers.muut.forum' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.FORUM',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.muut.forum',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.muut.channel' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.CHANNEL',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.muut.channel',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.muut.widget' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.WIDGET',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.jscomments.providers.muut.widget',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.muut.show_online' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.SHOW_ONLINE',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.jscomments.providers.muut.show_online',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.muut.show_title' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.SHOW_TITLE',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.jscomments.providers.muut.show_title',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.muut.upload' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.UPLOAD',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.jscomments.providers.muut.upload',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.muut.share' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.SHARE',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.jscomments.providers.muut.share',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.muut.language' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.MUUT.FIELDS.LANGUAGE',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.jscomments.providers.muut.language',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.muut' => [
+                'type' => 'section',
+                'name' => 'plugins.jscomments.muut',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.hypercomments' => [
+                'type' => '_parent',
+                'name' => 'plugins.jscomments.providers.hypercomments',
+                'form_field' => false
+            ],
+            'plugins.jscomments.providers.hypercomments.widget_id' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.WIDGET_ID',
+                'size' => 'x-small',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.jscomments.providers.hypercomments.widget_id',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.providers.hypercomments.social' => [
+                'type' => 'selectize',
+                'label' => 'PLUGINS.JS_COMMENTS.PROVIDERS.HYPERCOMMENTS.FIELDS.SOCIAL',
+                'validate' => [
+                    'type' => 'commalist'
+                ],
+                'name' => 'plugins.jscomments.providers.hypercomments.social',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.hypercomments' => [
+                'type' => 'section',
+                'name' => 'plugins.jscomments.hypercomments',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.params' => [
+                'type' => 'tab',
+                'name' => 'plugins.jscomments.params',
+                'validation' => 'strict'
+            ],
+            'plugins.jscomments.tabs' => [
+                'type' => 'tabs',
+                'active' => 1,
+                'class' => 'subtle',
+                'name' => 'plugins.jscomments.tabs',
                 'validation' => 'strict'
             ],
             'plugins.langswitcher' => [
@@ -3542,6 +4100,18 @@ return [
                         404 => 'plugins.error.routes.404'
                     ]
                 ],
+                'featherlight' => [
+                    'enabled' => 'plugins.featherlight.enabled',
+                    'active' => 'plugins.featherlight.active',
+                    'requirejs' => 'plugins.featherlight.requirejs',
+                    'gallery' => 'plugins.featherlight.gallery',
+                    'openSpeed' => 'plugins.featherlight.openSpeed',
+                    'closeSpeed' => 'plugins.featherlight.closeSpeed',
+                    'closeOnClick' => 'plugins.featherlight.closeOnClick',
+                    'closeOnEsc' => 'plugins.featherlight.closeOnEsc',
+                    'root' => 'plugins.featherlight.root',
+                    'initTemplate' => 'plugins.featherlight.initTemplate'
+                ],
                 'feed' => [
                     'enabled' => 'plugins.feed.enabled',
                     'limit' => 'plugins.feed.limit',
@@ -3563,6 +4133,61 @@ return [
                         'site_key' => 'plugins.form.recaptcha.site_key',
                         'secret_key' => 'plugins.form.recaptcha.secret_key'
                     ]
+                ],
+                'jscomments' => [
+                    'tabs' => 'plugins.jscomments.tabs',
+                    'jscomments' => 'plugins.jscomments.jscomments',
+                    'enabled' => 'plugins.jscomments.enabled',
+                    'active' => 'plugins.jscomments.active',
+                    'provider' => 'plugins.jscomments.provider',
+                    'params' => 'plugins.jscomments.params',
+                    'discourse' => 'plugins.jscomments.discourse',
+                    'providers' => [
+                        'discourse' => [
+                            'host' => 'plugins.jscomments.providers.discourse.host'
+                        ],
+                        'disqus' => [
+                            'shortname' => 'plugins.jscomments.providers.disqus.shortname',
+                            'show_count' => 'plugins.jscomments.providers.disqus.show_count',
+                            'language' => 'plugins.jscomments.providers.disqus.language'
+                        ],
+                        'facebook' => [
+                            'app_id' => 'plugins.jscomments.providers.facebook.app_id',
+                            'num_posts' => 'plugins.jscomments.providers.facebook.num_posts',
+                            'colorscheme' => 'plugins.jscomments.providers.facebook.colorscheme',
+                            'order_by' => 'plugins.jscomments.providers.facebook.order_by',
+                            'language' => 'plugins.jscomments.providers.facebook.language',
+                            'width' => 'plugins.jscomments.providers.facebook.width'
+                        ],
+                        'googleplus' => [
+                            'show_count' => 'plugins.jscomments.providers.googleplus.show_count',
+                            'language' => 'plugins.jscomments.providers.googleplus.language',
+                            'width' => 'plugins.jscomments.providers.googleplus.width'
+                        ],
+                        'intensedebate' => [
+                            'account_number' => 'plugins.jscomments.providers.intensedebate.account_number'
+                        ],
+                        'muut' => [
+                            'forum' => 'plugins.jscomments.providers.muut.forum',
+                            'channel' => 'plugins.jscomments.providers.muut.channel',
+                            'widget' => 'plugins.jscomments.providers.muut.widget',
+                            'show_online' => 'plugins.jscomments.providers.muut.show_online',
+                            'show_title' => 'plugins.jscomments.providers.muut.show_title',
+                            'upload' => 'plugins.jscomments.providers.muut.upload',
+                            'share' => 'plugins.jscomments.providers.muut.share',
+                            'language' => 'plugins.jscomments.providers.muut.language'
+                        ],
+                        'hypercomments' => [
+                            'widget_id' => 'plugins.jscomments.providers.hypercomments.widget_id',
+                            'social' => 'plugins.jscomments.providers.hypercomments.social'
+                        ]
+                    ],
+                    'disqus' => 'plugins.jscomments.disqus',
+                    'facebook' => 'plugins.jscomments.facebook',
+                    'googleplus' => 'plugins.jscomments.googleplus',
+                    'intensedebate' => 'plugins.jscomments.intensedebate',
+                    'muut' => 'plugins.jscomments.muut',
+                    'hypercomments' => 'plugins.jscomments.hypercomments'
                 ],
                 'langswitcher' => [
                     'enabled' => 'plugins.langswitcher.enabled',
@@ -3643,6 +4268,12 @@ return [
                 'options' => [
                     'action' => 'data',
                     'params' => '\\Grav\\Common\\Utils::dateFormats'
+                ]
+            ],
+            'plugins.jscomments.provider' => [
+                'options' => [
+                    'action' => 'data',
+                    'params' => '\\Grav\\Plugin\\JSCommentsPlugin::getProviders'
                 ]
             ],
             'plugins.login.user_registration.groups' => [

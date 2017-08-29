@@ -1,81 +1,101 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1503714740,
-    'checksum' => 'a2945eabf8343a34f835812205b2b82d',
+    'timestamp' => 1503892919,
+    'checksum' => 'ef8e27b38c247eca3c479545ac4281e8',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1503155312
+                'modified' => 1503160730
             ],
             'plugins/highlight' => [
                 'file' => 'user/config/plugins/highlight.yaml',
-                'modified' => 1502842160
+                'modified' => 1503159104
+            ],
+            'plugins/jscomments' => [
+                'file' => 'user/config/plugins/jscomments.yaml',
+                'modified' => 1503388406
+            ],
+            'plugins/langswitcher' => [
+                'file' => 'user/config/plugins/langswitcher.yaml',
+                'modified' => 1503714134
+            ],
+            'plugins/language-selector' => [
+                'file' => 'user/config/plugins/language-selector.yaml',
+                'modified' => 1503714154
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1503071166
+                'modified' => 1503159630
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1502842160
+                'modified' => 1503242352
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1503155312
+                'modified' => 1503160730
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1503235233
+                'modified' => 1503715378
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1502842160
+                'modified' => 1503158998
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1502842160
+                'modified' => 1503158998
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1502842160
+                'modified' => 1503158998
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1502842160
+                'modified' => 1503159000
             ]
         ],
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1503159776
+                'modified' => 1503160046
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1503159761
+                'modified' => 1503160326
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1502842162
+                'modified' => 1503159142
+            ],
+            'plugins/featherlight' => [
+                'file' => 'user/plugins/featherlight/featherlight.yaml',
+                'modified' => 1503892919
             ],
             'plugins/feed' => [
                 'file' => 'user/plugins/feed/feed.yaml',
-                'modified' => 1502842162
+                'modified' => 1503159148
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1503159755
+                'modified' => 1503160508
+            ],
+            'plugins/jscomments' => [
+                'file' => 'user/plugins/jscomments/jscomments.yaml',
+                'modified' => 1503390098
             ],
             'plugins/langswitcher' => [
                 'file' => 'user/plugins/langswitcher/langswitcher.yaml',
-                'modified' => 1502842162
+                'modified' => 1503159152
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1503159767
+                'modified' => 1503160540
             ],
             'plugins/markdown-fontawesome' => [
                 'file' => 'user/plugins/markdown-fontawesome/markdown-fontawesome.yaml',
@@ -83,11 +103,11 @@ return [
             ],
             'plugins/pagination' => [
                 'file' => 'user/plugins/pagination/pagination.yaml',
-                'modified' => 1502842162
+                'modified' => 1503159156
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1502842164
+                'modified' => 1503159164
             ]
         ]
     ],
@@ -178,6 +198,18 @@ return [
                     404 => '/error'
                 ]
             ],
+            'featherlight' => [
+                'enabled' => true,
+                'active' => true,
+                'gallery' => false,
+                'requirejs' => false,
+                'openSpeed' => 250,
+                'closeSpeed' => 250,
+                'closeOnClick' => 'background',
+                'closeOnEsc' => true,
+                'root' => 'body',
+                'initTemplate' => 'plugin://featherlight/js/featherlight.init.js'
+            ],
             'feed' => [
                 'enabled' => true,
                 'limit' => 10,
@@ -198,6 +230,61 @@ return [
                     'random_name' => false,
                     'accept' => [
                         0 => 'image/*'
+                    ]
+                ]
+            ],
+            'jscomments' => [
+                'enabled' => true,
+                'active' => true,
+                'provider' => 'disqus',
+                'providers' => [
+                    'discourse' => [
+                        'host' => ''
+                    ],
+                    'disqus' => [
+                        'shortname' => 'ajibari-com',
+                        'show_count' => true,
+                        'language' => 'en'
+                    ],
+                    'facebook' => [
+                        'app_id' => '',
+                        'num_posts' => 5,
+                        'colorscheme' => 'light',
+                        'order_by' => 'social',
+                        'language' => '',
+                        'width' => '100%'
+                    ],
+                    'googleplus' => [
+                        'show_count' => false,
+                        'language' => '',
+                        'width' => '100%'
+                    ],
+                    'intensedebate' => [
+                        'account_number' => ''
+                    ],
+                    'muut' => [
+                        'forum' => '',
+                        'channel' => 'General',
+                        'widget' => false,
+                        'show_online' => false,
+                        'show_title' => false,
+                        'upload' => false,
+                        'share' => true,
+                        'language' => ''
+                    ],
+                    'hypercomments' => [
+                        'widget_id' => NULL,
+                        'social' => [
+                            0 => 'vk',
+                            1 => 'odnoklassniki',
+                            2 => 'yandex',
+                            3 => 'mailru',
+                            4 => 'google',
+                            5 => 'livejournal',
+                            6 => 'facebook',
+                            7 => 'twitter',
+                            8 => 'tumblr'
+                        ]
                     ]
                 ]
             ],
@@ -265,6 +352,13 @@ return [
             ],
             'highlight' => [
                 'theme' => 'monokai_sublime'
+            ],
+            'language-selector' => [
+                'enabled' => false,
+                'built_in_css' => false,
+                'untranslated_pages_behavior' => 'none',
+                'button_display' => 'default',
+                'select_display' => 'default'
             ]
         ],
         'media' => [
@@ -534,17 +628,17 @@ return [
             ]
         ],
         'site' => [
-            'title' => 'Grav MultiLang',
+            'title' => 'Ajibari.com',
             'default_lang' => 'en',
             'author' => [
-                'name' => 'John Appleseed',
-                'email' => 'john@email.com'
+                'name' => 'Ridwan Aji Bari',
+                'email' => 'ajibari@gmail.com'
             ],
             'taxonomies' => [
                 0 => 'tag'
             ],
             'metadata' => [
-                'description' => 'My Grav Site'
+                'description' => 'My Personal Blog'
             ],
             'summary' => [
                 'enabled' => true,
@@ -600,7 +694,7 @@ return [
                 'include_default_lang' => true,
                 'translations' => true,
                 'translations_fallback' => true,
-                'session_store_active' => false,
+                'session_store_active' => true,
                 'http_accept_language' => true,
                 'override_locale' => false,
                 'home_redirect' => [
@@ -629,9 +723,9 @@ return [
                 'publish_dates' => true,
                 'process' => [
                     'markdown' => true,
-                    'twig' => false
+                    'twig' => true
                 ],
-                'twig_first' => false,
+                'twig_first' => true,
                 'never_cache_twig' => false,
                 'events' => [
                     'page' => true,
@@ -709,7 +803,7 @@ return [
                 'umask_fix' => false
             ],
             'assets' => [
-                'css_pipeline' => false,
+                'css_pipeline' => true,
                 'css_pipeline_include_externals' => true,
                 'css_pipeline_before_excludes' => true,
                 'css_minify' => true,
@@ -771,7 +865,7 @@ return [
             ]
         ],
         'security' => [
-            'salt' => 'WE0OflMC21v4cT'
+            'salt' => 'yTYgd34NRv2fIn'
         ]
     ]
 ];

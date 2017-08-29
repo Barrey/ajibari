@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/system/config/site.yaml',
-    'modified' => 1502842160,
+    'modified' => 1503158998,
     'data' => [
         'title' => 'Grav',
         'default_lang' => 'en',

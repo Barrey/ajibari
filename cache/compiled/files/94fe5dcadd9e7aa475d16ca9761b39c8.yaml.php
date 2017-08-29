@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/user/plugins/admin/languages/uk.yaml',
-    'modified' => 1503159776,
+    'modified' => 1503160068,
     'data' => [
         'PLUGIN_ADMIN' => [
             'LOGIN_BTN' => 'Увійти',

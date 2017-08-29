@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/system/languages/th.yaml',
-    'modified' => 1502842160,
+    'modified' => 1503159050,
     'data' => [
         'FRONTMATTER_ERROR_PAGE' => '---
 ชื่อเรื่อง: %1$s

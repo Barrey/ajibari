@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/user/config/system.yaml',
-    'modified' => 1503235233,
+    'modified' => 1503715378,
     'data' => [
         'absolute_urls' => false,
         'param_sep' => ':',
@@ -19,7 +19,7 @@ return [
             'include_default_lang' => true,
             'translations' => true,
             'translations_fallback' => true,
-            'session_store_active' => false,
+            'session_store_active' => true,
             'http_accept_language' => true,
             'override_locale' => false,
             'home_redirect' => [
@@ -48,9 +48,9 @@ return [
             'publish_dates' => true,
             'process' => [
                 'markdown' => true,
-                'twig' => false
+                'twig' => true
             ],
-            'twig_first' => false,
+            'twig_first' => true,
             'never_cache_twig' => false,
             'events' => [
                 'page' => true,
@@ -123,7 +123,7 @@ return [
             'umask_fix' => false
         ],
         'assets' => [
-            'css_pipeline' => false,
+            'css_pipeline' => true,
             'css_pipeline_include_externals' => true,
             'css_pipeline_before_excludes' => true,
             'css_minify' => true,

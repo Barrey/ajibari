@@ -1,0 +1,18 @@
+<?php
+return [
+    '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
+    'filename' => 'C:/xampp7/htdocs/ajibari.com/user/plugins/featherlight/featherlight.yaml',
+    'modified' => 1503892919,
+    'data' => [
+        'enabled' => true,
+        'active' => true,
+        'gallery' => false,
+        'requirejs' => false,
+        'openSpeed' => 250,
+        'closeSpeed' => 250,
+        'closeOnClick' => 'background',
+        'closeOnEsc' => true,
+        'root' => 'body',
+        'initTemplate' => 'plugin://featherlight/js/featherlight.init.js'
+    ]
+];

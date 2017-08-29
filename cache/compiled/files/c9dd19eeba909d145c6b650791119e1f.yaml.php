@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/user/plugins/feed/feed.yaml',
-    'modified' => 1502842162,
+    'modified' => 1503159148,
     'data' => [
         'enabled' => true,
         'limit' => 10,

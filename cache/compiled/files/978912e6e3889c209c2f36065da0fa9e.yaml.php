@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/xampp7/htdocs/ajibari.com/system/languages/sk.yaml',
-    'modified' => 1502842160,
+    'modified' => 1503159050,
     'data' => [
         'NICETIME' => [
             'NO_DATE_PROVIDED' => 'Neposkytnutý žiaden dátum',
