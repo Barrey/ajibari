@@ -1,6 +1,6 @@
 # [![Grav JSComments Plugin](assets/logo.png)][project]
 
-[![Release](https://img.shields.io/github/release/sommerregen/grav-plugin-jscomments.svg)][project] [![Issues](https://img.shields.io/github/issues/sommerregen/grav-plugin-jscomments.svg)][issues] [![Dual license](https://img.shields.io/badge/dual%20license-MIT%2FGPL-blue.svg)](LICENSE "License") <span style="float:right;">[![Flattr](https://api.flattr.com/button/flattr-badge-large.png)][flattr] [![PayPal](https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif)][paypal]</span>
+[![Release](https://img.shields.io/github/release/sommerregen/grav-plugin-jscomments.svg)][project] [![Issues](https://img.shields.io/github/issues/sommerregen/grav-plugin-jscomments.svg)][issues] [![Dual license](https://img.shields.io/badge/dual%20license-MIT%2FGPL-blue.svg)](LICENSE "License")
 
 > **JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Discourse, Disqus, Facebook, Google+, HyperComments, IntenseDebate, and Muut comment systems.
 
@@ -95,6 +95,26 @@ providers:
   intensedebate:
     account_number: ''      # Account number
 
+  isso:
+    host: ''                # The URL to the Isso commenting system
+    builtin_css: true       # Use provided stylesheet
+    language: ''            # Default language (e.g. 'en')
+    reply_to_self: false    # Reply to self
+    require:
+      author: true          # Require author name
+      email: true           # Require author email
+    comments:
+      number: 10            # Number of top level comments to show by default
+      nested_number: 5      # Number of nested level comments to show by default
+      reveal: 5             # Number of comments to reveal on clicking the "X Hidden" link
+    avatar:
+      enabled: true         # Enable or disable avatar generation.
+      background: ''        # Set avatar background color.
+      foreground: ''        # Set avatar foreground color. Up to 8 colors are possible.
+    vote:
+      enabled: true         # Enable or disable voting feature on the client side.
+      levels: '-5,5'        # List of vote levels used to customize comment appearance based on score.
+
   muut:
     forum: ''               # Forum name
     channel: 'General'      # The name of the muut channel
@@ -119,7 +139,7 @@ providers:
       - 'tumblr'
 ```
 
-If you need to change any value, then the best process is to copy the [jscomments.yaml](jscomments.yaml) file into your `users/config/plugins/` folder (create it if it doesn't exist) and modify it there. This will override the default settings.
+If you need to change any value, then the best process is to copy the [jscomments.yaml](jscomments.yaml) file into your `user/config/plugins/` folder (create it if it doesn't exist) and modify it there. This will override the default settings.
 
 If you want to change any of these settings for a specific page you can do so via the page header. Below is an example of how these settings can be used.
 
@@ -192,12 +212,6 @@ After that please note:
 * Feature requests are more likely to get attention if you include a clearly described use case.
 * If you wish to submit a pull request, please make again sure that your request match the [guidelines for contributing](docs/CONTRIBUTING.md) and that you keep track of adding unit tests for any new or changed functionality.
 
-### Support and donations
-
-If you like my project, feel free to support me via [![Flattr](https://api.flattr.com/button/flattr-badge-large.png)][flattr] or by sending me some bitcoins to [**1HQdy5aBzNKNvqspiLvcmzigCq7doGfLM4**][bitcoin].
-
-Thanks!
-
 ## License
 
 Copyright (c) 2017+ [Benjamin Regler][github]. See also the list of [contributors] who participated in this project.
@@ -209,10 +223,6 @@ Copyright (c) 2017+ [Benjamin Regler][github]. See also the list of [contributor
 [github]: https://github.com/sommerregen/ "GitHub account from Benjamin Regler"
 [gpl-license]: http://opensource.org/licenses/GPL-3.0 "GPLv3 license"
 [mit-license]: http://www.opensource.org/licenses/mit-license.php "MIT license"
-
-[flattr]: https://flattr.com/submit/auto?user_id=Sommerregen&url=https://github.com/sommerregen/grav-plugin-jscomments "Flatter my GitHub project"
-[paypal]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SYFNP82USG3RN "Donate for my GitHub project using PayPal"
-[bitcoin]: bitcoin:1HQdy5aBzNKNvqspiLvcmzigCq7doGfLM4?label=GitHub%20project "Donate for my GitHub project using BitCoin"
 [gnu]: https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/License_icon-gpl-88x31.svg/88px-License_icon-gpl-88x31.svg.png "GNU license - Some rights reserved"
 
 [project]: https://github.com/sommerregen/grav-plugin-jscomments

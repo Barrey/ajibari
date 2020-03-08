@@ -15,4 +15,4 @@ Love coffe, pizza, burger, indonesian food. Lol, i love them all.
 I always learn coz technology never stop.
 I wish one day i can work on Dubai.
 
-follow me [@ajibari](http://www.twitter.com/ajibari), i'm not talking much in twitter :)
+follow me [@ajibari](http://www.twitter.com/ajibari)

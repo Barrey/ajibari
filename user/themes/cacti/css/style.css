@@ -185,7 +185,7 @@ ul.langswitcher a {
 
 #wrapper {
   clear: both;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 60px 40px 100px 40px;
 }
@@ -234,7 +234,7 @@ li	{ list-style-type:circle;  }
 /* Line Height */
 #post-body, p { line-height:1.7; }
 
-b, strong { font-weight: 500;
+b, strong { font-weight: bold;
   color: #1E2025; }
 em, i { font-style: italic; }
 

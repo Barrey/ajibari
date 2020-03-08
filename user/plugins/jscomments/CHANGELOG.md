@@ -1,3 +1,33 @@
+# v2.2.1
+## 06/04/2018
+
+3. [](#bugfix)
+  * Fixed issues in Isso template [#26](https://github.com/Sommerregen/grav-plugin-jscomments/pull/26)
+
+# v2.2.0
+## 01/29/2018
+
+1. [](#new)
+  * Added [Isso commenting system](https://posativ.org/isso/) [#12](https://github.com/Sommerregen/grav-plugin-jscomments/issues/12)
+
+# v2.1.4
+## 01/13/2018
+
+3. [](#bugfix)
+  * Fixed `CHANGELOG.md` and `README.md` [#22](https://github.com/Sommerregen/grav-plugin-jscomments/pull/22)
+
+# v2.1.3
+## 01/13/2018
+
+3. [](#bugfix)
+  * Fixed issue with HyperComments service provider: No login solution except anonymous [#23](https://github.com/Sommerregen/grav-plugin-jscomments/issues/23) & [#24](https://github.com/Sommerregen/grav-plugin-jscomments/pull/24) (Thanks to [@foufrix](https://github.com/foufrix))
+
+# v2.1.2
+## 08/20/2017
+
+3. [](#bugfix)
+  * Made IntenseDebate service provider protocol agnostic [#21](https://github.com/Sommerregen/grav-plugin-jscomments/issues/21)
+
 # v2.1.1
 ## 07/21/2017
 

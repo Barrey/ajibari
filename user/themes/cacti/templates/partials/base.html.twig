@@ -34,6 +34,7 @@
     <section id="wrapper">
         {% block header %}
             {% if page.header.header is not same as(false) and theme_config.title_header %}
+                {{ page.header.header }} AND {{ theme_config.title_header }}
                 {% include 'partials/header.html.twig' %}
             {% endif %}
         {% endblock %}

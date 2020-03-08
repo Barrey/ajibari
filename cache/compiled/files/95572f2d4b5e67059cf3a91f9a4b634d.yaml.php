@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'plugins://langswitcher/langswitcher.yaml',
-    'modified' => 1503159152,
+    'modified' => 1583660128,
     'data' => [
         'enabled' => true,
         'built_in_css' => true,

@@ -2,19 +2,19 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'plugins://jscomments/jscomments.yaml',
-    'modified' => 1503390098,
+    'modified' => 1583659931,
     'data' => [
         'enabled' => true,
         'active' => true,
-        'provider' => 'disqus',
+        'provider' => '',
         'providers' => [
             'discourse' => [
                 'host' => ''
             ],
             'disqus' => [
-                'shortname' => 'ajibari-com',
+                'shortname' => '',
                 'show_count' => false,
-                'language' => 'en'
+                'language' => ''
             ],
             'facebook' => [
                 'app_id' => '',
@@ -31,6 +31,30 @@ return [
             ],
             'intensedebate' => [
                 'account_number' => ''
+            ],
+            'isso' => [
+                'host' => '',
+                'builtin_css' => true,
+                'language' => '',
+                'reply_to_self' => false,
+                'require' => [
+                    'author' => true,
+                    'email' => true
+                ],
+                'comments' => [
+                    'number' => 10,
+                    'nested_number' => 5,
+                    'reveal' => 5
+                ],
+                'avatar' => [
+                    'enabled' => true,
+                    'background' => '',
+                    'foreground' => ''
+                ],
+                'vote' => [
+                    'enabled' => true,
+                    'levels' => '-5,5'
+                ]
             ],
             'muut' => [
                 'forum' => '',

@@ -1,11 +1,10 @@
 enabled: true
-author: Ridwan Aji Bari
+author: Wilberforce Humphries
 title_header: false
 home_profile: true
 infinite_scroll: true
 analytics: UA-YOURCODE
 social:
-    twitter: @ajibari
-    linkedin: ridwan-aji-bari-26a85937
-    facebook: ridwanajibari
+    twitter: @getgrav
+    facebook: rockettheme
 
